@@ -1,4 +1,4 @@
-const Bottle = ({ btl }) => {
+const Bottle = ({ btl, addToCart }) => {
   console.log(btl);
   const { img, name, price } = btl;
   return (
@@ -7,6 +7,9 @@ const Bottle = ({ btl }) => {
         <img className="w-full" src={img} alt="" />
         <p className="text-center text-2xl">Name: {name}</p>
         <p className="text-center text-xl">Price: ${price}</p>
+        <button className="btn w-1/4 mx-auto text-xl " onClick={addToCart}>
+          Purchase
+        </button>
       </div>
     </main>
   );
